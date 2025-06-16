@@ -1,0 +1,204 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #0a0e1a;
+            min-height: 100vh;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 80%, #1a1a2e 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, #16213e 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, #0f3460 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        /* Navbar */
+        .navbar {
+            padding: 20px 40px;
+            border-bottom: 1px solid #1f2937;
+            background: rgba(10, 14, 26, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+        }
+
+        .app-name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #f1f5f9;
+            letter-spacing: 1px;
+        }
+
+        /* Chart Section */
+        .main-content {
+            padding: 60px 40px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .chart-wrapper {
+            background: #111827;
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid #1f2937;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .chart-header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .chart-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .chart-subtitle {
+            color: #94a3b8;
+            font-size: 16px;
+        }
+
+        /* Chart Bars */
+        .chart-area {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            height: 380px;
+            padding: 30px 20px;
+            background: #0d1117;
+            border-radius: 12px;
+            border: 1px solid #21262d;
+            position: relative;
+        }
+
+        .chart-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(148, 163, 184, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(148, 163, 184, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
+
+        .bar-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .bar-column {
+            width: 50px;
+            border-radius: 6px 6px 0 0;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .bar-column:hover {
+            transform: scale(1.1) translateY(-8px);
+            filter: brightness(1.2);
+        }
+
+        .bar-1 { height: 240px; background: linear-gradient(180deg, #22c55e, #15803d); }
+        .bar-2 { height: 150px; background: linear-gradient(180deg, #eab308, #ca8a04); }
+        .bar-3 { height: 300px; background: linear-gradient(180deg, #f97316, #ea580c); }
+        .bar-4 { height: 45px; background: linear-gradient(180deg, #ef4444, #dc2626); }
+        .bar-5 { height: 5px; background: linear-gradient(180deg, #a855f7, #9333ea); min-height: 8px; }
+        .bar-6 { height: 270px; background: linear-gradient(180deg, #06b6d4, #0891b2); }
+
+        .percentage-label {
+            margin-bottom: 12px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .bar-label {
+            margin-top: 16px;
+            font-size: 14px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+
+        /* Glow effects */
+        .bar-1:hover { box-shadow: 0 0 30px rgba(34, 197, 94, 0.5); }
+        .bar-2:hover { box-shadow: 0 0 30px rgba(234, 179, 8, 0.5); }
+        .bar-3:hover { box-shadow: 0 0 30px rgba(249, 115, 22, 0.5); }
+        .bar-4:hover { box-shadow: 0 0 30px rgba(239, 68, 68, 0.5); }
+        .bar-5:hover { box-shadow: 0 0 30px rgba(168, 85, 247, 0.5); }
+        .bar-6:hover { box-shadow: 0 0 30px rgba(6, 182, 212, 0.5); }
+
+        /* Animations */
+        .bar-column {
+            animation: slideUp 0.8s ease-out forwards;
+            transform: translateY(100px);
+            opacity: 0;
+        }
+
+        .bar-item:nth-child(1) .bar-column { animation-delay: 0.1s; }
+        .bar-item:nth-child(2) .bar-column { animation-delay: 0.2s; }
+        .bar-item:nth-child(3) .bar-column { animation-delay: 0.3s; }
+        .bar-item:nth-child(4) .bar-column { animation-delay: 0.4s; }
+        .bar-item:nth-child(5) .bar-column { animation-delay: 0.5s; }
+        .bar-item:nth-child(6) .bar-column { animation-delay: 0.6s; }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar { padding: 15px 20px; }
+            .main-content { padding: 40px 20px; }
+            .chart-wrapper { padding: 25px; }
+            .chart-area { height: 280px; flex-wrap: wrap; gap: 15px; }
+            .bar-item { width: 60px; }
+            .bar-column { width: 40px; }
+            .chart-title { font-size: 22px; }
+        }

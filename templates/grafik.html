@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='grafik.css') }}">
+
+    <title>Analisis Prediktif Respon Audiens</title>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo-icon">M</div>
+            <div class="app-name">Marketing AI</div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="chart-wrapper">
+            <div class="chart-header">
+                <h1 class="chart-title">Analisis Prediktif Respon Target Audiens</h1>
+                <p class="chart-subtitle">Hasil Klasifikasi Respon Audiens Menggunakan Algoritma C5.0</p>
+            </div>
+            
+            <div class="chart-area">
+                <div class="chart-grid"></div>
+                
+                <div class="bar-item">
+                    <div class="percentage-label">80%</div>
+                    <div class="bar-column bar-1"></div>
+                    <div class="bar-label">Sangat Tertarik</div>
+                </div>
+                
+                <div class="bar-item">
+                    <div class="percentage-label">50%</div>
+                    <div class="bar-column bar-2"></div>
+                    <div class="bar-label">Cukup Tertarik</div>
+                </div>
+                
+                <div class="bar-item">
+                    <div class="percentage-label">100%</div>
+                    <div class="bar-column bar-3"></div>
+                    <div class="bar-label">Tertarik Penuh</div>
+                </div>
+                
+                <div class="bar-item">
+                    <div class="percentage-label">15%</div>
+                    <div class="bar-column bar-4"></div>
+                    <div class="bar-label">Kurang Tertarik</div>
+                </div>
+                
+                <div class="bar-item">
+                    <div class="percentage-label">1%</div>
+                    <div class="bar-column bar-5"></div>
+                    <div class="bar-label">Tidak Tertarik</div>
+                </div>
+                
+                <div class="bar-item">
+                    <div class="percentage-label">90%</div>
+                    <div class="bar-column bar-6"></div>
+                    <div class="bar-label">Potensial Tinggi</div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
